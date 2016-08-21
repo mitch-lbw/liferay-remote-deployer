@@ -44,7 +44,6 @@ public class DeployerServiceImpl implements DeployerService
 
     public static final long WAIT_INTERVAL = 5000;
 
-    @Override
     public ReturnCode undeploy( final String pluginPackageName, final Long maxWaitTime, boolean ignoreNotDeployed ) throws Exception
     {
         PluginPackage toUninstall = DeployManagerUtil.getInstalledPluginPackage( pluginPackageName );
@@ -64,7 +63,6 @@ public class DeployerServiceImpl implements DeployerService
         return ReturnCode.UNDEPLOY_OK;
     }
 
-    @Override
     public ReturnCode deploy( final String pluginPackageName, final MultipartFile file, final Long maxWaitTime ) throws Exception
     {
         AutoDeploymentContext ctx = new AutoDeploymentContext();
